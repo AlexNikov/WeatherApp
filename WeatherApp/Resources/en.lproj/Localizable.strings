@@ -1,0 +1,16 @@
+"Main" = "Main";
+"Forecast" = "Forecast";
+"Sunny" = "Sunny weather condition";
+"Partly cloudy" = "Partly cloudy weather condition";
+"Cloudy" = "Cloudy weather condition";
+"Mist" = "Mist weather condition";
+"Snow" = "Snow weather condition";
+"Freezing rain" = "Freezing rain weather condition";
+"Heavy rain" = "Heavy rain weather condition";
+"Partly cloudy with rain" = "Partly cloudy with rain weather condition";
+"Light rain" = "Light rain weather condition";
+"Thunderstorm" = "Thunderstorm weather condition";
+
+"Warning" = "Warning";
+"LocationWarning" = "To get weather data, you need to enable the definition of geolocation in the settings";
+"Settings" = "Settings";
