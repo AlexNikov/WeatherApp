@@ -30,7 +30,7 @@ class AlertProvider: IAlertProvider
 		let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
 		alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
 
-//		show(alertController)
+		show(alertController)
 	}
 
 	func showAlert(with message: String, title: String? = nil, secondButtonTitle: String, action: @escaping () -> Void ) {
@@ -41,7 +41,7 @@ class AlertProvider: IAlertProvider
 												handler: { _ in
 													action()
 												}))
-//		show(alertController)
+		show(alertController)
 
 	}
 
