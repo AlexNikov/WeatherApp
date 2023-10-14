@@ -89,7 +89,7 @@ extension CitySearchViewController: UITableViewDelegate, UITableViewDataSource
         guard loading == false else { return }
 
         let item: GeoResponse = data[indexPath.item]
-        let cityInfo = CityInfo(name: item.localNames?.ru ?? "",
+        let cityInfo = CityInfo(name: item.localNames?.ru ?? item.state ?? item.country ?? "",
                                 location: Location(longitude: item.lon ?? 0,
                                                    latitude: item.lat ?? 0))
         updateCityHandler?(cityInfo)
