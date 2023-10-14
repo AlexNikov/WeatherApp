@@ -4,7 +4,6 @@
 //
 //  Created by Алексей Молокович on 31.07.2021.
 //
-import GooglePlaces
 import UIKit
 
 class MainTabCoordinator: BaseCoordinator, ICoordinator

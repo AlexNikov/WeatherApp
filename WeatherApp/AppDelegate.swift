@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GooglePlaces
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	)
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-		GMSPlacesClient.provideAPIKey("AIzaSyC0DsZI70HjFg9QvulhqBptNO9MfYHh-wk")
 
 		window = UIWindow()
 		window?.rootViewController = rootCoordinator.navigationController
