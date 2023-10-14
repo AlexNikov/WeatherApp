@@ -59,6 +59,19 @@
 		FA49FB392ADAA2150072EA49 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA49FB382ADAA2150072EA49 /* SnapKit */; };
 		FA49FB3B2ADAA2C70072EA49 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB3A2ADAA2C70072EA49 /* CityCell.swift */; };
 		FA49FB3E2ADAA40E0072EA49 /* TableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB3D2ADAA40E0072EA49 /* TableViewCell+Extension.swift */; };
+		FA49FB412ADAA56A0072EA49 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = FA49FB402ADAA56A0072EA49 /* Moya */; };
+		FA49FB432ADAA56A0072EA49 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = FA49FB422ADAA56A0072EA49 /* RxMoya */; };
+		FA49FB452ADAAA5E0072EA49 /* GeoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB442ADAAA5E0072EA49 /* GeoRouter.swift */; };
+		FA49FB482ADAAD2C0072EA49 /* GeoRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB472ADAAD2C0072EA49 /* GeoRequestParameters.swift */; };
+		FA49FB4A2ADAAEAD0072EA49 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB492ADAAEAD0072EA49 /* Encodable+Extension.swift */; };
+		FA49FB4C2ADAAF150072EA49 /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB4B2ADAAF150072EA49 /* JSONEncoder.swift */; };
+		FA49FB4E2ADAB0DB0072EA49 /* GeoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB4D2ADAB0DB0072EA49 /* GeoService.swift */; };
+		FA49FB502ADAB1410072EA49 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB4F2ADAB1410072EA49 /* EmptyModel.swift */; };
+		FA49FB522ADAC02D0072EA49 /* BaseTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB512ADAC02D0072EA49 /* BaseTarget.swift */; };
+		FA49FB542ADAC4AF0072EA49 /* GeoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB532ADAC4AF0072EA49 /* GeoResponse.swift */; };
+		FA49FB622ADAC9AA0072EA49 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FA49FB612ADAC9AA0072EA49 /* RxCocoa */; };
+		FA49FB642ADAC9AA0072EA49 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FA49FB632ADAC9AA0072EA49 /* RxRelay */; };
+		FA49FB662ADAC9AA0072EA49 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA49FB652ADAC9AA0072EA49 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +130,14 @@
 		B7E23B7226B5894600DBF625 /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
 		FA49FB3A2ADAA2C70072EA49 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		FA49FB3D2ADAA40E0072EA49 /* TableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		FA49FB442ADAAA5E0072EA49 /* GeoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoRouter.swift; sourceTree = "<group>"; };
+		FA49FB472ADAAD2C0072EA49 /* GeoRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoRequestParameters.swift; sourceTree = "<group>"; };
+		FA49FB492ADAAEAD0072EA49 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		FA49FB4B2ADAAF150072EA49 /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
+		FA49FB4D2ADAB0DB0072EA49 /* GeoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoService.swift; sourceTree = "<group>"; };
+		FA49FB4F2ADAB1410072EA49 /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
+		FA49FB512ADAC02D0072EA49 /* BaseTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTarget.swift; sourceTree = "<group>"; };
+		FA49FB532ADAC4AF0072EA49 /* GeoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +145,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA49FB662ADAC9AA0072EA49 /* RxSwift in Frameworks */,
+				FA49FB642ADAC9AA0072EA49 /* RxRelay in Frameworks */,
+				FA49FB432ADAA56A0072EA49 /* RxMoya in Frameworks */,
+				FA49FB412ADAA56A0072EA49 /* Moya in Frameworks */,
+				FA49FB622ADAC9AA0072EA49 /* RxCocoa in Frameworks */,
 				FA49FB392ADAA2150072EA49 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,8 +336,12 @@
 		B7E23B6A26B56B4300DBF625 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FA49FB462ADAAD110072EA49 /* Models */,
 				B7E23B6B26B56B6200DBF625 /* NetworkManager.swift */,
 				B7388E7126B5CD2800B2763A /* WeatherServices.swift */,
+				FA49FB442ADAAA5E0072EA49 /* GeoRouter.swift */,
+				FA49FB4D2ADAB0DB0072EA49 /* GeoService.swift */,
+				FA49FB512ADAC02D0072EA49 /* BaseTarget.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -330,8 +360,20 @@
 			isa = PBXGroup;
 			children = (
 				FA49FB3D2ADAA40E0072EA49 /* TableViewCell+Extension.swift */,
+				FA49FB492ADAAEAD0072EA49 /* Encodable+Extension.swift */,
+				FA49FB4B2ADAAF150072EA49 /* JSONEncoder.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA49FB462ADAAD110072EA49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA49FB472ADAAD2C0072EA49 /* GeoRequestParameters.swift */,
+				FA49FB4F2ADAB1410072EA49 /* EmptyModel.swift */,
+				FA49FB532ADAC4AF0072EA49 /* GeoResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +394,11 @@
 			name = WeatherApp;
 			packageProductDependencies = (
 				FA49FB382ADAA2150072EA49 /* SnapKit */,
+				FA49FB402ADAA56A0072EA49 /* Moya */,
+				FA49FB422ADAA56A0072EA49 /* RxMoya */,
+				FA49FB612ADAC9AA0072EA49 /* RxCocoa */,
+				FA49FB632ADAC9AA0072EA49 /* RxRelay */,
+				FA49FB652ADAC9AA0072EA49 /* RxSwift */,
 			);
 			productName = WeatherApp;
 			productReference = B7E23B1826B46D1100DBF625 /* WeatherApp.app */;
@@ -383,6 +430,8 @@
 			mainGroup = B7E23B0F26B46D1100DBF625;
 			packageReferences = (
 				FA49FB372ADAA2150072EA49 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FA49FB3F2ADAA56A0072EA49 /* XCRemoteSwiftPackageReference "Moya" */,
+				FA49FB602ADAC9AA0072EA49 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = B7E23B1926B46D1100DBF625 /* Products */;
 			projectDirPath = "";
@@ -414,6 +463,7 @@
 			files = (
 				B7388E8126B68A6B00B2763A /* AppFont.swift in Sources */,
 				B7388E7026B5C34000B2763A /* WeatherResponse.swift in Sources */,
+				FA49FB502ADAB1410072EA49 /* EmptyModel.swift in Sources */,
 				B7388E9326B6C8C100B2763A /* Location.swift in Sources */,
 				B7388E9D26B71C4D00B2763A /* WeatherItem.swift in Sources */,
 				B7E23B6C26B56B6200DBF625 /* NetworkManager.swift in Sources */,
@@ -421,6 +471,7 @@
 				B7388E9526B6EC4300B2763A /* LocalLanguageService.swift in Sources */,
 				B7E23B2626B46D1100DBF625 /* WeatherApp.xcdatamodeld in Sources */,
 				FA49FB3B2ADAA2C70072EA49 /* CityCell.swift in Sources */,
+				FA49FB482ADAAD2C0072EA49 /* GeoRequestParameters.swift in Sources */,
 				B7E23B6526B5480C00DBF625 /* IconAssets.swift in Sources */,
 				B7E23B3A26B4815400DBF625 /* IFlowCoordinator.swift in Sources */,
 				B7388E7226B5CD2800B2763A /* WeatherServices.swift in Sources */,
@@ -438,10 +489,12 @@
 				B7E23B6026B541F100DBF625 /* ForecastTabView.swift in Sources */,
 				B7E23B7326B5894600DBF625 /* CitySearchViewController.swift in Sources */,
 				B7388E9B26B7134900B2763A /* ForecastTabCell.swift in Sources */,
+				FA49FB4E2ADAB0DB0072EA49 /* GeoService.swift in Sources */,
 				B7E23B3F26B48F8D00DBF625 /* DependencyContainer.swift in Sources */,
 				B7388E8C26B6A1F700B2763A /* StorageKey.swift in Sources */,
 				B7E23B5E26B5418300DBF625 /* MainTabView.swift in Sources */,
 				B7388E9726B701CA00B2763A /* ForecastResponse.swift in Sources */,
+				FA49FB4C2ADAAF150072EA49 /* JSONEncoder.swift in Sources */,
 				B7388E6D26B5A59100B2763A /* CityInfo.swift in Sources */,
 				B7388E7426B5D05200B2763A /* WeatherCondition.swift in Sources */,
 				B7E23B5A26B53BF200DBF625 /* ForecastTabCoordinator.swift in Sources */,
@@ -453,10 +506,14 @@
 				B7E23B6926B5611800DBF625 /* BaseCoordinator.swift in Sources */,
 				B7E23B5C26B53DF400DBF625 /* CoordinatorFactory.swift in Sources */,
 				B7388E9926B7092B00B2763A /* ForecastTabInteractor.swift in Sources */,
+				FA49FB522ADAC02D0072EA49 /* BaseTarget.swift in Sources */,
 				B7388E7826B5F6E800B2763A /* CitySearchAssembly.swift in Sources */,
+				FA49FB4A2ADAAEAD0072EA49 /* Encodable+Extension.swift in Sources */,
 				B7E23B4426B51BB500DBF625 /* IDependencyProvider.swift in Sources */,
+				FA49FB452ADAAA5E0072EA49 /* GeoRouter.swift in Sources */,
 				B7388E8F26B6AC7400B2763A /* LocationManager.swift in Sources */,
 				B7E23B7026B581D400DBF625 /* ForecastTabPresenter.swift in Sources */,
+				FA49FB542ADAC4AF0072EA49 /* GeoResponse.swift in Sources */,
 				FA49FB3E2ADAA40E0072EA49 /* TableViewCell+Extension.swift in Sources */,
 				B7388E9F26B71E4200B2763A /* WeatherItemDecorator.swift in Sources */,
 			);
@@ -674,6 +731,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		FA49FB3F2ADAA56A0072EA49 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+		FA49FB602ADAC9AA0072EA49 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -681,6 +754,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA49FB372ADAA2150072EA49 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		FA49FB402ADAA56A0072EA49 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA49FB3F2ADAA56A0072EA49 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		FA49FB422ADAA56A0072EA49 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA49FB3F2ADAA56A0072EA49 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		FA49FB612ADAC9AA0072EA49 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA49FB602ADAC9AA0072EA49 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FA49FB632ADAC9AA0072EA49 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA49FB602ADAC9AA0072EA49 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		FA49FB652ADAC9AA0072EA49 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA49FB602ADAC9AA0072EA49 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 
