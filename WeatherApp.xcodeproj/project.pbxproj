@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,6 +56,9 @@
 		B7E23B6E26B581C500DBF625 /* MainTabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E23B6D26B581C500DBF625 /* MainTabPresenter.swift */; };
 		B7E23B7026B581D400DBF625 /* ForecastTabPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E23B6F26B581D400DBF625 /* ForecastTabPresenter.swift */; };
 		B7E23B7326B5894600DBF625 /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E23B7226B5894600DBF625 /* CitySearchViewController.swift */; };
+		FA49FB392ADAA2150072EA49 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA49FB382ADAA2150072EA49 /* SnapKit */; };
+		FA49FB3B2ADAA2C70072EA49 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB3A2ADAA2C70072EA49 /* CityCell.swift */; };
+		FA49FB3E2ADAA40E0072EA49 /* TableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49FB3D2ADAA40E0072EA49 /* TableViewCell+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +115,8 @@
 		B7E23B6D26B581C500DBF625 /* MainTabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPresenter.swift; sourceTree = "<group>"; };
 		B7E23B6F26B581D400DBF625 /* ForecastTabPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTabPresenter.swift; sourceTree = "<group>"; };
 		B7E23B7226B5894600DBF625 /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
+		FA49FB3A2ADAA2C70072EA49 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		FA49FB3D2ADAA40E0072EA49 /* TableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableViewCell+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA49FB392ADAA2150072EA49 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +175,7 @@
 		B7E23B1A26B46D1100DBF625 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA49FB3C2ADAA3F60072EA49 /* Extensions */,
 				B7388E8426B6935900B2763A /* Logger */,
 				B7E23B6326B547E900DBF625 /* Resources */,
 				B7E23B4526B5208F00DBF625 /* Modules */,
@@ -314,8 +321,17 @@
 			children = (
 				B7E23B7226B5894600DBF625 /* CitySearchViewController.swift */,
 				B7388E7726B5F6E800B2763A /* CitySearchAssembly.swift */,
+				FA49FB3A2ADAA2C70072EA49 /* CityCell.swift */,
 			);
 			path = CitySearch;
+			sourceTree = "<group>";
+		};
+		FA49FB3C2ADAA3F60072EA49 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA49FB3D2ADAA40E0072EA49 /* TableViewCell+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +350,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				FA49FB382ADAA2150072EA49 /* SnapKit */,
+			);
 			productName = WeatherApp;
 			productReference = B7E23B1826B46D1100DBF625 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -362,6 +381,9 @@
 				ru,
 			);
 			mainGroup = B7E23B0F26B46D1100DBF625;
+			packageReferences = (
+				FA49FB372ADAA2150072EA49 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = B7E23B1926B46D1100DBF625 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -398,6 +420,7 @@
 				B7E23B6226B545EA00DBF625 /* TabBarPresenter.swift in Sources */,
 				B7388E9526B6EC4300B2763A /* LocalLanguageService.swift in Sources */,
 				B7E23B2626B46D1100DBF625 /* WeatherApp.xcdatamodeld in Sources */,
+				FA49FB3B2ADAA2C70072EA49 /* CityCell.swift in Sources */,
 				B7E23B6526B5480C00DBF625 /* IconAssets.swift in Sources */,
 				B7E23B3A26B4815400DBF625 /* IFlowCoordinator.swift in Sources */,
 				B7388E7226B5CD2800B2763A /* WeatherServices.swift in Sources */,
@@ -434,6 +457,7 @@
 				B7E23B4426B51BB500DBF625 /* IDependencyProvider.swift in Sources */,
 				B7388E8F26B6AC7400B2763A /* LocationManager.swift in Sources */,
 				B7E23B7026B581D400DBF625 /* ForecastTabPresenter.swift in Sources */,
+				FA49FB3E2ADAA40E0072EA49 /* TableViewCell+Extension.swift in Sources */,
 				B7388E9F26B71E4200B2763A /* WeatherItemDecorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +664,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA49FB372ADAA2150072EA49 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA49FB382ADAA2150072EA49 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA49FB372ADAA2150072EA49 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B7E23B2426B46D1100DBF625 /* WeatherApp.xcdatamodeld */ = {
