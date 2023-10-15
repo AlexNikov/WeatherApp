@@ -26,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		rootCoordinator.start()
 		window?.makeKeyAndVisible()
 
+        if CommandLine.isUITesting {
+            UIView.setAnimationsEnabled(false)
+        }
+
 		return true
 	}
 }

@@ -1,0 +1,45 @@
+[
+    {
+        "name": "Moscow",
+        "local_names": {
+            "ru": "Москва",
+            "en": "Moscow"
+        },
+        "lat": 55.7504461,
+        "lon": 37.6174943,
+        "country": "RU",
+        "state": "Moscow"
+    },
+    {
+        "name": "Moscow",
+        "local_names": {
+            "ru": "Москва",
+            "en": "Moscow"
+        },
+        "lat": 46.7323875,
+        "lon": -117.0001651,
+        "country": "US",
+        "state": "Idaho"
+    },
+    {
+        "name": "Moscow",
+        "lat": 45.071096,
+        "lon": -69.891586,
+        "country": "US",
+        "state": "Maine"
+    },
+    {
+        "name": "Moscow",
+        "lat": 35.0619984,
+        "lon": -89.4039612,
+        "country": "US",
+        "state": "Tennessee"
+    },
+    {
+        "name": "Moscow",
+        "lat": 39.5437014,
+        "lon": -79.0050273,
+        "country": "US",
+        "state": "Maryland"
+    }
+]

@@ -33,8 +33,8 @@ enum GeoRouter: BaseTarget {
 
     var task: Task {
         switch self {
-        case .city(let geoRequestParameters):
-            var parameters = geoRequestParameters.dictionary
+        case .city(let params):
+            var parameters = params.dictionary
             parameters["appid"] = api
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         }
@@ -42,5 +42,17 @@ enum GeoRouter: BaseTarget {
 
     var headers: [String: String]? {
         return ["Content-type": "application/json"]
+    }
+
+    var sampleData: Data {
+        switch self {
+        case .city(let params):
+            let json = "\(self.path)?q=\(params.q)"
+            guard let url = Bundle.main.url(forResource: json, withExtension: "json"),
+                  let data = try? Data(contentsOf: url) else {
+                return Data()
+            }
+            return data
+        }
     }
 }

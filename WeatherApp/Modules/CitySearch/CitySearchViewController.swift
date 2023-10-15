@@ -68,6 +68,9 @@ class CitySearchViewController: UIViewController {
             make.leading.trailing.bottom.equalToSuperview()
         }
 
+        searchBar.searchTextField.accessibilityLabel = CitySearchAccessibility.searchBar.rawValue
+        searchBar.accessibilityTraits = UIAccessibilityTraits.searchField
+
         tableView.register(CityCell.self, forCellReuseIdentifier: CityCell.identifier)
     }
 }

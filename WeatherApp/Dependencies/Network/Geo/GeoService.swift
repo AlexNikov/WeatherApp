@@ -11,7 +11,12 @@ import Moya
 import RxMoya
 
 final class GeoService {
-    private let provider = MoyaProvider<GeoRouter>()
+    private lazy var provider: MoyaProvider<GeoRouter> = {
+        if CommandLine.isUITesting {
+            return MoyaProvider<GeoRouter>(stubClosure: MoyaProvider.immediatelyStub)
+        }
+        return MoyaProvider<GeoRouter>()
+    }()
 
     func getCity(with params: GeoRequestParameters) -> Observable<[GeoResponse]> {
         provider.rx

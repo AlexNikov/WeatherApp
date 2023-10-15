@@ -42,7 +42,7 @@ extension MainTabPresenter: IMainTabPresenter
 		loadSavedCityWeather()
 
 		interactor.handlerIfDeniedLocation = { [weak self] in
-			self?.showLocationAlert()
+//			self?.showLocationAlert()
 		}
 		interactor.checkPermission()
 	}
