@@ -7,5 +7,5 @@ target 'WeatherAppUITests' do
 end
 
 target 'WeatherAppTests' do
-#  pod 'KIF', :configurations => ['Debug']
+  pod 'KIF', :configurations => ['Debug']
 end

@@ -33,3 +33,27 @@ final class WeatherAppTests: XCTestCase {
     }
 
 }
+
+extension XCTestCase {
+    func viewTester(_ file : String = #file, _ line : Int = #line) -> KIFUIViewTestActor {
+        return KIFUIViewTestActor(inFile: file, atLine: line, delegate: self)
+    }
+
+    func system(_ file : String = #file, _ line : Int = #line) -> KIFSystemTestActor {
+        return KIFSystemTestActor(inFile: file, atLine: line, delegate: self)
+    }
+}
+
+class SimpleSwiftTest: KIFTestCase {
+
+    func testGreenCellWithIdentifier() {
+        viewTester().usingIdentifier(MainTabAccessibility.settingItem.rawValue).waitForView()
+        viewTester().usingIdentifier(MainTabAccessibility.settingItem.rawValue).tap()
+    }
+
+    func testBlueCellWithLabel() {
+        viewTester().usingLabel("Blue Cell Label").tap()
+        viewTester().usingLabel("Selected: Blue Color").waitForView()
+
+    }
+}

@@ -12,7 +12,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-	lazy var dependencyContainer = DependencyContainer()
+    lazy var dependencyContainer: DependencyContainerProtocol {
+        if CommandLine.isUITesting {
+            return MockDependencyContainer()
+        } else {
+            return DependencyContainer()
+        }
+    }
 	lazy var moduleFactory = ModuleFactory(dependencyContainer: dependencyContainer)
 	lazy var coordinatorFactory = CoordinatorFactory(moduleFactory: moduleFactory)
 	lazy var rootCoordinator: RootCoordinator = coordinatorFactory.make(

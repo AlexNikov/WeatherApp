@@ -63,7 +63,7 @@ private extension MainTabViewController
 		let settingItem = UIBarButtonItem(barButtonSystemItem: .add,
 										  target: self,
 										  action: #selector(tapSettingButton))
-        settingItem.accessibilityLabel = MainTabAccessibility.settingItem.rawValue
+        settingItem.accessibilityIdentifier = MainTabAccessibility.settingItem.rawValue
 		navigationItem.rightBarButtonItem = settingItem
 	}
 
