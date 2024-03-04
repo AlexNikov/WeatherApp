@@ -7,6 +7,7 @@
 
 import XCTest
 import SnapshotTesting
+import KIF
 @testable import WeatherApp
 
 final class WeatherAppTests: XCTestCase {
@@ -49,11 +50,12 @@ extension XCTestCase {
 class SimpleSwiftTest: KIFTestCase {
 
     func testGreenCellWithIdentifier() {
-//        isRecording = true
+        isRecording = true
+        UIView.setAnimationsEnabled(false)
         let mainTab = viewTester().usingIdentifier(MainTabAccessibility.content.rawValue).waitForView()
         viewTester().usingIdentifier(MainTabAccessibility.cityNameLabel.rawValue).waitForView()
-        var labelArray = getAllAccessibilityLabelInWindows()
-        print("labelArray = \(labelArray)")
+//        var labelArray = getAllAccessibilityLabelInWindows()
+//        print("labelArray = \(labelArray)")
 
         viewTester().usingIdentifier(MainTabAccessibility.settingItem.rawValue).tap()
 
@@ -66,15 +68,9 @@ class SimpleSwiftTest: KIFTestCase {
 
 
         viewTester().usingLabel("RU-Tatarstan-Казань").tap()
-        checkSnapshot(of: mainTab!, as: .image, testName: "1")
-        checkSnapshot(of: cell!, as: .image,testName: "cell")
+        checkSnapshot(of: mainTab!, as: .image, snapshotDirectory: "test", testName: "1")
+        checkSnapshot(of: cell!, as: .image, snapshotDirectory: "test",testName: "cell")
     }
-
-//    func testBlueCellWithLabel() {
-//        viewTester().usingLabel("Blue Cell Label").tap()
-//        viewTester().usingLabel("Selected: Blue Color").waitForView()
-//
-//    }
 
     func getAllAccessibilityLabel(_ viewRoot: UIView) -> [String]! {
 
@@ -104,6 +100,7 @@ class SimpleSwiftTest: KIFTestCase {
         as snapshotting: Snapshotting<Value, Format>,
         named name: String? = nil,
         record recording: Bool = false,
+        snapshotDirectory: String? = nil,
         timeout: TimeInterval = 5,
         file: StaticString = #file,
         testName: String = #function,
@@ -114,6 +111,7 @@ class SimpleSwiftTest: KIFTestCase {
             as: snapshotting,
             named: name,
             record: recording,
+            snapshotDirectory: snapshotDirectory,
             timeout: timeout,
             file: file,
             testName: testName,

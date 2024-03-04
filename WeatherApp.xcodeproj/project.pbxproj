@@ -10,6 +10,7 @@
 		159B893F2B95BF9A00358A61 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 159B893E2B95BF9A00358A61 /* SnapshotTesting */; };
 		159B89412B95C42200358A61 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159B89402B95C42200358A61 /* UIApplication+Extension.swift */; };
 		159B89432B95D05C00358A61 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 159B89422B95D05C00358A61 /* SnapshotTesting */; };
+		159B89642B960C9D00358A61 /* KIF in Frameworks */ = {isa = PBXBuildFile; productRef = 159B89632B960C9D00358A61 /* KIF */; };
 		37FC8732BC9A734E14188581 /* libPods-WeatherApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 279C61E8A18DE2062D5A6D1D /* libPods-WeatherApp.a */; };
 		4787D2FA7B71604F78600830 /* libPods-WeatherAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A26F4D34E05E76AD2EDAA45F /* libPods-WeatherAppUITests.a */; };
 		B7388E6D26B5A59100B2763A /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7388E6C26B5A59100B2763A /* CityInfo.swift */; };
@@ -203,7 +204,6 @@
 		FA5CDE742ADB35430093A7BB /* CitySearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchScreen.swift; sourceTree = "<group>"; };
 		FA5CDE7A2ADBD7300093A7BB /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5CDE7C2ADBD7300093A7BB /* WeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppTests.swift; sourceTree = "<group>"; };
-		FAB745442ADF233000F4EDD9 /* Tests-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +234,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				159B89642B960C9D00358A61 /* KIF in Frameworks */,
 				B9B0443039CCE63241911F68 /* libPods-WeatherAppTests.a in Frameworks */,
 				159B893F2B95BF9A00358A61 /* SnapshotTesting in Frameworks */,
 			);
@@ -569,7 +570,6 @@
 			isa = PBXGroup;
 			children = (
 				FA5CDE7C2ADBD7300093A7BB /* WeatherAppTests.swift */,
-				FAB745442ADF233000F4EDD9 /* Tests-Header.h */,
 			);
 			path = WeatherAppTests;
 			sourceTree = "<group>";
@@ -642,6 +642,7 @@
 			name = WeatherAppTests;
 			packageProductDependencies = (
 				159B893E2B95BF9A00358A61 /* SnapshotTesting */,
+				159B89632B960C9D00358A61 /* KIF */,
 			);
 			productName = WeatherAppTests;
 			productReference = FA5CDE7A2ADBD7300093A7BB /* WeatherAppTests.xctest */;
@@ -684,6 +685,7 @@
 				FA49FB3F2ADAA56A0072EA49 /* XCRemoteSwiftPackageReference "Moya" */,
 				FA49FB602ADAC9AA0072EA49 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				159B893D2B95BDDE00358A61 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				159B89602B960C0C00358A61 /* XCRemoteSwiftPackageReference "KIF" */,
 			);
 			productRefGroup = B7E23B1926B46D1100DBF625 /* Products */;
 			projectDirPath = "";
@@ -1142,7 +1144,6 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "WeatherAppTests/Tests-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherApp";
@@ -1167,7 +1168,6 @@
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "WeatherAppTests/Tests-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherApp";
@@ -1224,6 +1224,14 @@
 				minimumVersion = 1.15.3;
 			};
 		};
+		159B89602B960C0C00358A61 /* XCRemoteSwiftPackageReference "KIF" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kif-framework/KIF.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.1;
+			};
+		};
 		FA49FB372ADAA2150072EA49 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -1260,6 +1268,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 159B893D2B95BDDE00358A61 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
 			productName = SnapshotTesting;
+		};
+		159B89632B960C9D00358A61 /* KIF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 159B89602B960C0C00358A61 /* XCRemoteSwiftPackageReference "KIF" */;
+			productName = KIF;
 		};
 		FA49FB382ADAA2150072EA49 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
