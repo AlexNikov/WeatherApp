@@ -1,0 +1,1 @@
+<WeatherApp.MainTabViewController>, state: appearing, view: <WeatherApp.MainTabView>

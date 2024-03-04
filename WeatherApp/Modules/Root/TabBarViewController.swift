@@ -34,6 +34,11 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate
 
 		presenter.willAppear(vc: self)
 	}
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        view.accessibilityIdentifier = MainTabAccessibility.content.rawValue
+    }
 }
 
 extension TabBarViewController: ITabBarViewController

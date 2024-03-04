@@ -9,9 +9,9 @@ import UIKit
 
 class ModuleFactory
 {
-	private let dependencyContainer: DependencyContainer
+	private let dependencyContainer: DependencyContainerProtocol
 
-	init(dependencyContainer: DependencyContainer) {
+	init(dependencyContainer: DependencyContainerProtocol) {
 		self.dependencyContainer = dependencyContainer
 	}
 

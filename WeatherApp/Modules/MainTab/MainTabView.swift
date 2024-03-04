@@ -37,6 +37,7 @@ extension MainTabView: IMainTabView
 {
 	func set(cityName: String) {
 		cityNameLabel.text = cityName
+        cityNameLabel.accessibilityIdentifier = MainTabAccessibility.cityNameLabel.rawValue
 	}
 
 	func set(hint: String,

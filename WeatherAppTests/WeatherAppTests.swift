@@ -6,6 +6,8 @@
 //
 
 import XCTest
+import SnapshotTesting
+@testable import WeatherApp
 
 final class WeatherAppTests: XCTestCase {
 
@@ -47,13 +49,53 @@ extension XCTestCase {
 class SimpleSwiftTest: KIFTestCase {
 
     func testGreenCellWithIdentifier() {
-        viewTester().usingIdentifier(MainTabAccessibility.settingItem.rawValue).waitForView()
+//        isRecording = true
+        let mainTab = viewTester().usingIdentifier(MainTabAccessibility.content.rawValue).waitForView()
+        viewTester().usingIdentifier(MainTabAccessibility.cityNameLabel.rawValue).waitForView()
+        var labelArray = getAllAccessibilityLabelInWindows()
+        print("labelArray = \(labelArray)")
+
         viewTester().usingIdentifier(MainTabAccessibility.settingItem.rawValue).tap()
+
+        viewTester().usingLabel(CitySearchAccessibility.searchBar.rawValue).waitForTappableView()
+        viewTester().usingLabel(CitySearchAccessibility.searchBar.rawValue).tap()
+        viewTester().usingLabel(CitySearchAccessibility.searchBar.rawValue).waitToBecomeFirstResponder()
+        viewTester().usingLabel(CitySearchAccessibility.searchBar.rawValue).enterText("Kazan")
+labelArray = getAllAccessibilityLabelInWindows()
+        print("labelArray = \(labelArray)")
+        let cell = viewTester().usingLabel("RU-Moscow-Москва").waitForTappableView()
+
+        viewTester().usingLabel("RU-Moscow-Москва").tap()
+        assertSnapshot(of: mainTab!, as: .image, testName: "1")
+        assertSnapshot(of: cell!, as: .image,testName: "cell")
     }
 
-    func testBlueCellWithLabel() {
-        viewTester().usingLabel("Blue Cell Label").tap()
-        viewTester().usingLabel("Selected: Blue Color").waitForView()
+//    func testBlueCellWithLabel() {
+//        viewTester().usingLabel("Blue Cell Label").tap()
+//        viewTester().usingLabel("Selected: Blue Color").waitForView()
+//
+//    }
 
+    func getAllAccessibilityLabel(_ viewRoot: UIView) -> [String]! {
+
+        var array = [String]()
+        for view in viewRoot.subviews {
+            if let lbl = view.accessibilityLabel {
+                array += [lbl]
+            }
+
+            array += getAllAccessibilityLabel(view)
+        }
+
+        return array
+    }
+
+    func getAllAccessibilityLabelInWindows() -> [String]! {
+        var labelArray = [String]()
+        for  window in UIApplication.shared.windows {
+            labelArray += self.getAllAccessibilityLabel(window)
+        }
+
+        return labelArray
     }
 }

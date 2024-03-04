@@ -6,5 +6,7 @@
 //
 
 enum MainTabAccessibility: UIAccessibilityType {
+    case content
+    case cityNameLabel
     case settingItem = "MainTab.addCity"
 }

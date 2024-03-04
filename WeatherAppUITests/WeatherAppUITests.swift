@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SnapshotTesting
 
 final class WeatherAppUITests: XCTestCase {
 
