@@ -61,13 +61,13 @@ class SimpleSwiftTest: KIFTestCase {
         viewTester().usingLabel(CitySearchAccessibility.searchBar.rawValue).tap()
         viewTester().usingLabel(CitySearchAccessibility.searchBar.rawValue).waitToBecomeFirstResponder()
         viewTester().usingLabel(CitySearchAccessibility.searchBar.rawValue).enterText("Kazan")
-labelArray = getAllAccessibilityLabelInWindows()
-        print("labelArray = \(labelArray)")
-        let cell = viewTester().usingLabel("RU-Moscow-Москва").waitForTappableView()
 
-        viewTester().usingLabel("RU-Moscow-Москва").tap()
-        assertSnapshot(of: mainTab!, as: .image, testName: "1")
-        assertSnapshot(of: cell!, as: .image,testName: "cell")
+        let cell = viewTester().usingLabel("RU-Tatarstan-Казань").waitForTappableView()
+
+
+        viewTester().usingLabel("RU-Tatarstan-Казань").tap()
+        checkSnapshot(of: mainTab!, as: .image, testName: "1")
+        checkSnapshot(of: cell!, as: .image,testName: "cell")
     }
 
 //    func testBlueCellWithLabel() {
@@ -97,5 +97,29 @@ labelArray = getAllAccessibilityLabelInWindows()
         }
 
         return labelArray
+    }
+
+    func checkSnapshot<Value, Format>(
+        of value: @autoclosure () throws -> Value,
+        as snapshotting: Snapshotting<Value, Format>,
+        named name: String? = nil,
+        record recording: Bool = false,
+        timeout: TimeInterval = 5,
+        file: StaticString = #file,
+        testName: String = #function,
+        line: UInt = #line
+    ) {
+        let failure = verifySnapshot(
+            of: try value(),
+            as: snapshotting,
+            named: name,
+            record: recording,
+            timeout: timeout,
+            file: file,
+            testName: testName,
+            line: line
+        )
+        guard let message = failure, isRecording == false else { return }
+        XCTFail(message, file: file, line: line)
     }
 }
