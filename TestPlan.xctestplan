@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "F3964079-8A55-4CEA-B068-6D4EB9981AEF",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WeatherApp.xcodeproj",
+        "identifier" : "FA5CDE792ADBD7300093A7BB",
+        "name" : "WeatherAppTests"
+      }
+    }
+  ],
+  "version" : 1
+}
